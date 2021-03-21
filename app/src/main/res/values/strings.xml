@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Movie Master</string>
+
+
+    <string name="registered_movie">Registered Movie</string>
+    <string name="display_movie">Display Movie</string>
+    <string name="favourites_movie">Favourites</string>
+    <string name="edit_movie">Edit Movie</string>
+    <string name="search_movie">Search Movie</string>
+    <string name="rating_movie">Rating Movie</string>
+
+    <!-- hints-->
+    <string name="title_movie_hint">Title of Movie</string>
+    <string name="year_hint">The Year</string>
+    <string name="director_hint">Name of Director</string>
+    <string name="actor_hint">Name of Actors/Actresses</string>
+    <string name="rating_hint">Rating(1-10)</string>
+    <string name="review_hint">Review</string>
+
+
+    <!--    button-->
+    <string name="btn_save">Save</string>
+    <string name="btn_update">Update</string>
+</resources>

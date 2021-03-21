@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="100dp"
+    android:paddingBottom="100dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <Button
+                android:id="@+id/register_movie"
+                style="@style/my_Button_style"
+                android:layout_width="0dp"
+
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:background="@drawable/background_shape_button"
+                android:drawableTop="@drawable/registration_icon"
+
+                android:text="@string/registered_movie" />
+<LinearLayout
+    android:layout_weight="1"
+    android:layout_width="0dp"
+    android:layout_height="0dp">
+
+</LinearLayout>
+            <Button
+                android:id="@+id/display_movie"
+                style="@style/my_Button_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:background="@drawable/background_shape_button"
+                android:drawableTop="@drawable/display_icon"
+                android:text="@string/display_movie" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <Button
+                android:id="@+id/favourit_movie"
+                style="@style/my_Button_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:background="@drawable/background_shape_button"
+                android:drawableTop="@drawable/favorite_border_24"
+                android:text="@string/favourites_movie" />
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/edit_movie"
+                style="@style/my_Button_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:background="@drawable/background_shape_button"
+
+                android:drawableTop="@drawable/edit_24"
+                android:text="@string/edit_movie"
+                app:layout_constraintBottom_toBottomOf="@+id/favourit_movie"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/favourit_movie" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <Button
+            android:id="@+id/search_movie"
+            style="@style/my_Button_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:background="@drawable/background_shape_button"
+            android:drawableTop="@drawable/ic_baseline_search_24"
+            android:text="@string/search_movie"
+            />
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/rating_movie"
+            style="@style/my_Button_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:background="@drawable/background_shape_button"
+            android:drawableTop="@drawable/stars_24"
+            android:text="@string/rating_movie"
+        />
+    </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
