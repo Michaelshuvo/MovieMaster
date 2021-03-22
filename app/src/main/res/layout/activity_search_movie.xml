@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.8"
         android:text="LookUp"
-        android:background="@drawable/background_shape_button"
+        android:background="@drawable/background_shape_button_round"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
