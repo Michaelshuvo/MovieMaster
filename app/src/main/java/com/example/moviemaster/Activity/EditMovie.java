@@ -1,4 +1,4 @@
-package com.example.moviemaster;
+package com.example.moviemaster.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.moviemaster.Database.Constant;
 import com.example.moviemaster.Database.DbHelper;
 import com.example.moviemaster.ModelClass.Movie;
+import com.example.moviemaster.R;
 
 public class EditMovie extends AppCompatActivity {
     EditText title, year, director, actors, review;
@@ -24,6 +25,7 @@ public class EditMovie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_movie);
+        getSupportActionBar().setTitle(getResources().getString(R.string.edit_movie_titlebar));
         dbHelper = new DbHelper(getApplicationContext());
         title = findViewById(R.id.title_edt);
         year = findViewById(R.id.year_edt);

@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    tools:context=".SearchMovie">
+    android:background="@color/offwhite"
+    tools:context=".Activity.SearchMovie">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/search_ly"
+    android:padding="20dp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     android:layout_width="match_parent"

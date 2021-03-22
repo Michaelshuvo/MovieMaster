@@ -18,6 +18,15 @@
     <string name="review_hint">Review</string>
 
 
+<!--    activity actionbar Title-->
+    <string name="display_movies_titlebar">Display Movies</string>
+    <string name="register_movie_titlebar">Register Movie</string>
+    <string name="edit_movies_titlebar">Edit Movies</string>
+    <string name="edit_movie_titlebar">Edit Movie</string>
+    <string name="favourites_titlebar">Favourites</string>
+    <string name="movie_details_titlebar">Movie Details</string>
+    <string name="rating_titlebar">Ratings</string>
+
     <!--    button-->
     <string name="btn_save">Save</string>
     <string name="btn_update">Update</string>

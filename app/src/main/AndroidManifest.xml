@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieMaster">
-        <activity android:name=".MovieDetails"></activity>
-        <activity android:name=".EditMovie" />
-        <activity android:name=".Ratings" />
-        <activity android:name=".SearchMovie" />
-        <activity android:name=".EditMovieList" />
-        <activity android:name=".FavouriteMovie" />
-        <activity android:name=".DisplayMovies" />
-        <activity android:name=".Register_Movie" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.MovieDetails"></activity>
+        <activity android:name=".Activity.EditMovie" />
+        <activity android:name=".Activity.Ratings" />
+        <activity android:name=".Activity.SearchMovie" />
+        <activity android:name=".Activity.EditMovieList" />
+        <activity android:name=".Activity.Favourites" />
+        <activity android:name=".Activity.DisplayMovies" />
+        <activity android:name=".Activity.Register_Movie" />
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.example.moviemaster;
+package com.example.moviemaster.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,14 +10,14 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.moviemaster.Adapter.FavMovieListAdapter;
-import com.example.moviemaster.Adapter.MovieListAdapter;
 import com.example.moviemaster.Database.DbHelper;
 import com.example.moviemaster.ModelClass.Movie;
+import com.example.moviemaster.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FavouriteMovie extends AppCompatActivity {
+public class Favourites extends AppCompatActivity {
     //variables
     RecyclerView rv;
     DbHelper database;
@@ -27,6 +27,7 @@ public class FavouriteMovie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourites_movies);
+        getSupportActionBar().setTitle(getResources().getString(R.string.favourites_titlebar));
         //declare and initialize database class
         DbHelper dbHelper = new DbHelper(getApplicationContext());
 
@@ -37,7 +38,7 @@ public class FavouriteMovie extends AppCompatActivity {
 
         //get recyclerview id from xml,set adapter into recycle view and set vertical list
         rv=findViewById(R.id.fav_rv);
-        rv.setLayoutManager(new LinearLayoutManager(FavouriteMovie.this,LinearLayoutManager.VERTICAL,false));
+        rv.setLayoutManager(new LinearLayoutManager(Favourites.this,LinearLayoutManager.VERTICAL,false));
         rv.setHasFixedSize(true);
 
         //set data into adapter with checkbox listener for update favourite list
@@ -60,17 +61,17 @@ public class FavouriteMovie extends AppCompatActivity {
 
                     if(isUpdated){
                         //if update successfully destroy this activity and go to  mainactivity
-                        Toast.makeText(FavouriteMovie.this, "Favourite list updated successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Favourites.this, "Favourite list updated successfully", Toast.LENGTH_SHORT).show();
                         finish();
                     }
                     else {
                         //if it can't update it will return false and show this toast msg
-                        Toast.makeText(FavouriteMovie.this, "Something wrong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Favourites.this, "Something wrong", Toast.LENGTH_SHORT).show();
 
                     }
                 }
                 else {
-                    Toast.makeText(FavouriteMovie.this, "Favourite list updated successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Favourites.this, "Favourite list updated successfully", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }

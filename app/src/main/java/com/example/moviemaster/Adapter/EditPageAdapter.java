@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.moviemaster.Database.Constant;
-import com.example.moviemaster.EditMovie;
+import com.example.moviemaster.Activity.EditMovie;
 import com.example.moviemaster.ModelClass.Movie;
 import com.example.moviemaster.R;
 

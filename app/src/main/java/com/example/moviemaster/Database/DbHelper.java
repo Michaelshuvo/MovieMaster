@@ -4,16 +4,11 @@ package com.example.moviemaster.Database;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 import android.widget.Toast;
 
-import com.example.moviemaster.ModelClass.Customer;
 import com.example.moviemaster.ModelClass.Movie;
-import com.example.moviemaster.ModelClass.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -246,7 +241,7 @@ public class DbHelper extends SQLiteOpenHelper {
         List<Movie> movieList = new ArrayList<>();
 
 
-        String lsit_query = "SELECT * FROM " + Constant.MOVIE_TABLE_NAME + " WHERE "+Constant.TITLE+" LIKE "+"'%"+s+"%'"+" OR "+Constant.REVIEW+" LIKE "+"'%"+s+"%'"+" OR "+Constant.ACTORS+" LIKE "+"'%"+s+"%'"+";";
+        String lsit_query = "SELECT * FROM " + Constant.MOVIE_TABLE_NAME + " WHERE "+Constant.TITLE+" LIKE "+"'%"+s+"%'"+" OR "+Constant.DIRECTOR+" LIKE "+"'%"+s+"%'"+" OR "+Constant.ACTORS+" LIKE "+"'%"+s+"%'"+";";
         SQLiteDatabase db = this.getReadableDatabase();
         cursor = db.rawQuery(lsit_query, null);
         if (cursor != null) {

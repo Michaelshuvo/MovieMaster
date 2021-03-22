@@ -1,4 +1,4 @@
-package com.example.moviemaster;
+package com.example.moviemaster.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.moviemaster.Database.DbHelper;
 import com.example.moviemaster.ModelClass.Movie;
+import com.example.moviemaster.R;
 
 public class Register_Movie extends AppCompatActivity {
     //declaring all global variables
@@ -22,6 +23,7 @@ public class Register_Movie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registered__movie);
+        getSupportActionBar().setTitle(getResources().getString(R.string.register_movie_titlebar));
         //initializing all buttton id and edit text id
         dbHelper = new DbHelper(getApplicationContext());
         title = findViewById(R.id.title_edt);

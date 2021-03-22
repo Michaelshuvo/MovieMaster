@@ -1,4 +1,4 @@
-package com.example.moviemaster;
+package com.example.moviemaster.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.moviemaster.R;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //declaring all buttons
-       Button registerMovieBtn,favouritesMovieBtn,DisplayMoviesBtn,editMovieBtn,searchBtn;
+       Button registerMovieBtn,favouritesMovieBtn,DisplayMoviesBtn,editMovieBtn,searchBtn,ratingBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         searchBtn=findViewById(R.id.search_movie);
         searchBtn.setOnClickListener(this);
 
-
+        ratingBtn=findViewById(R.id.rating_movie);
+        ratingBtn.setOnClickListener(this);
 
     }
 //all button click listener
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(MainActivity.this, Register_Movie.class));
         }
         else if(view.getId()==R.id.favourit_movie){
-            startActivity(new Intent(MainActivity.this, FavouriteMovie.class));
+            startActivity(new Intent(MainActivity.this, Favourites.class));
         }
         else if(view.getId()==R.id.display_movie){
             startActivity(new Intent(MainActivity.this,DisplayMovies.class));
@@ -47,7 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if(view.getId()==R.id.search_movie){
             startActivity(new Intent(MainActivity.this, SearchMovie.class));
         }
-
+        else if(view.getId()==R.id.rating_movie){
+            startActivity(new Intent(MainActivity.this, Ratings.class));
+        }
         }
 
     }

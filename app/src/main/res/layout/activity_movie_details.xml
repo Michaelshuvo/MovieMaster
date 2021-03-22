@@ -17,8 +17,14 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
-            android:padding="30dp"
             android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edit_Lay"
+            android:paddingTop="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
             <com.google.android.material.textfield.TextInputLayout
                 app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/title_lay"
@@ -130,30 +136,30 @@
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="30dp"
-
                 android:layout_height="wrap_content">
 
             </TextView>
-
-            <androidx.appcompat.widget.AppCompatRatingBar
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <RatingBar
                 android:id="@+id/rating_bar"
-                android:layout_width="match_parent"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
                 android:layout_marginTop="15dp"
                 android:isIndicator="true"
+                android:max="10"
                 android:numStars="10"
                 android:progressBackgroundTint="@color/white"
                 android:progressTint="@color/yellow"
-                android:scaleX="0.5"
-                android:scaleY="0.5"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
                 android:secondaryProgressTint="@android:color/transparent"
                 android:stepSize="1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/ratingTv"
-                app:layout_constraintTop_toBottomOf="@+id/ratingTv">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_Lay">
 
-            </androidx.appcompat.widget.AppCompatRatingBar>
+            </RatingBar>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

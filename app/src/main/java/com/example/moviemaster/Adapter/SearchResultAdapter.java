@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.moviemaster.Database.Constant;
 import com.example.moviemaster.ModelClass.Movie;
-import com.example.moviemaster.MovieDetails;
+import com.example.moviemaster.Activity.MovieDetails;
 import com.example.moviemaster.R;
 
 import java.util.List;

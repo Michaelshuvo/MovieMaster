@@ -1,8 +1,10 @@
-package com.example.moviemaster;
+package com.example.moviemaster.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.moviemaster.R;
 
 public class Ratings extends AppCompatActivity {
 

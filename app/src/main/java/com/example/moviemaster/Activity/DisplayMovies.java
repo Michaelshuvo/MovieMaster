@@ -1,4 +1,4 @@
-package com.example.moviemaster;
+package com.example.moviemaster.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.moviemaster.Adapter.MovieListAdapter;
 import com.example.moviemaster.Database.DbHelper;
 import com.example.moviemaster.ModelClass.Movie;
+import com.example.moviemaster.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,7 @@ public class DisplayMovies extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         DbHelper dbHelper = new DbHelper(getApplicationContext());
         setContentView(R.layout.activity_display_movies);
-
+        getSupportActionBar().setTitle(getResources().getString(R.string.display_movies_titlebar));
         addFavList = findViewById(R.id.add_favourit);
 
 

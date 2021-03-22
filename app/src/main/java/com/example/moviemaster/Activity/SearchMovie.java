@@ -1,4 +1,4 @@
-package com.example.moviemaster;
+package com.example.moviemaster.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import com.example.moviemaster.Adapter.SearchResultAdapter;
 import com.example.moviemaster.Database.DbHelper;
+import com.example.moviemaster.R;
 
 public class SearchMovie extends AppCompatActivity {
     //declaring all global variables
@@ -24,6 +25,7 @@ public class SearchMovie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_movie);
+        getSupportActionBar().setTitle(getResources().getString(R.string.search_movie));
         DbHelper dbHelper = new DbHelper(getApplicationContext());
 
         //initializing all buttton id and edit text id

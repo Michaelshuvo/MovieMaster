@@ -3,7 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/offwhite"
     android:layout_height="match_parent"
-    tools:context=".Ratings">
+    tools:context=".Activity.Ratings">
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:isIndicator="false"
+        android:numStars="10"
+        android:max="10"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/yellow"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        style="@style/MyRatingBar"
+        android:layout_gravity="start"
+        android:secondaryProgressTint="@android:color/transparent"
+        android:stepSize="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       >
 
+    </RatingBar>
 </androidx.constraintlayout.widget.ConstraintLayout>

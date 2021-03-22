@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:paddingTop="100dp"
+    android:paddingTop="80dp"
     android:paddingBottom="100dp"
+    android:background="@color/offwhite"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +30,7 @@
                 android:id="@+id/register_movie"
                 style="@style/my_Button_style"
                 android:layout_width="0dp"
-
+                android:paddingTop="30dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4.5"
                 android:background="@drawable/background_shape_button"
@@ -48,6 +49,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4.5"
+                android:paddingTop="30dp"
                 android:background="@drawable/background_shape_button"
                 android:drawableTop="@drawable/display_icon"
                 android:text="@string/display_movie" />
@@ -67,6 +69,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4.5"
+                android:paddingTop="30dp"
                 android:background="@drawable/background_shape_button"
                 android:drawableTop="@drawable/favorite_border_24"
                 android:text="@string/favourites_movie" />
@@ -82,6 +85,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4.5"
+                android:paddingTop="30dp"
                 android:background="@drawable/background_shape_button"
 
                 android:drawableTop="@drawable/edit_24"
@@ -103,6 +107,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4.5"
+            android:paddingTop="30dp"
             android:background="@drawable/background_shape_button"
             android:drawableTop="@drawable/ic_baseline_search_24"
             android:text="@string/search_movie"
@@ -119,6 +124,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4.5"
+            android:paddingTop="30dp"
             android:background="@drawable/background_shape_button"
             android:drawableTop="@drawable/stars_24"
             android:text="@string/rating_movie"

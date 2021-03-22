@@ -11,6 +11,6 @@
     <color name="yellow">#F5B331</color>
     <color name="pimary_color">#218DBD</color>
     <color name="colorPrimaryVariant">#1A79A3</color>
-    <color name="colorSecondary">#75CCE2</color>
+    <color name="colorSecondary">#218DBD</color>
 
 </resources>
