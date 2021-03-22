@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Movie Master</string>
+    <string name="app_name">Movie App</string>
 
 
     <string name="registered_movie">Registered Movie</string>
@@ -30,4 +30,5 @@
     <!--    button-->
     <string name="btn_save">Save</string>
     <string name="btn_update">Update</string>
+    <string name="btn_delete">Delete</string>
 </resources>

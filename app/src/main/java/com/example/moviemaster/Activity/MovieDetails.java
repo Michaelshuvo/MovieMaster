@@ -15,6 +15,7 @@ import com.example.moviemaster.ModelClass.Movie;
 import com.example.moviemaster.R;
 
 public class MovieDetails extends AppCompatActivity {
+    //declaring all global variables
     EditText title, year, director, actors, review;
     Movie movie;
     DbHelper dbHelper;
@@ -24,6 +25,7 @@ public class MovieDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
         getSupportActionBar().setTitle(getResources().getString(R.string.movie_details_titlebar));
+        //initializing all buttton id and edit text id
         dbHelper = new DbHelper(getApplicationContext());
         title = findViewById(R.id.title_edt);
         year = findViewById(R.id.year_edt);
@@ -31,8 +33,9 @@ public class MovieDetails extends AppCompatActivity {
         actors = findViewById(R.id.actors_edt);
         rating = findViewById(R.id.rating_bar);
         review = findViewById(R.id.review_edt);
-
+//get id from previous intent
         int id=getIntent().getIntExtra(Constant.MOVIEID,0);
+        //if got id then fetching data by id from database and set data into edittext
         if(id!=0){
             movie=dbHelper.getMovieById(String.valueOf(id));
             if(movie!=null){

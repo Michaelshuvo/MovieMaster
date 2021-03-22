@@ -271,6 +271,24 @@ public class DbHelper extends SQLiteOpenHelper {
         return movieList;
 
     }
-//===========================================
 
+
+    //deleting movie from database
+    public Boolean deleteMovie(String id) {
+        Cursor cursor = null;
+
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        try {
+            db.delete(Constant.MOVIE_TABLE_NAME, Constant.ID + "=?", new String[]{id});
+            return true;
+        } catch (Exception e) {
+            return false;
+
+        }
+
+
+//===========================================
+    }
 }

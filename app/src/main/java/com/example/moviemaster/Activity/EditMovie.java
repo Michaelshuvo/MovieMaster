@@ -14,10 +14,11 @@ import com.example.moviemaster.Database.Constant;
 import com.example.moviemaster.Database.DbHelper;
 import com.example.moviemaster.ModelClass.Movie;
 import com.example.moviemaster.R;
+import com.example.moviemaster.Util.MyAlertDialog;
 
 public class EditMovie extends AppCompatActivity {
     EditText title, year, director, actors, review;
-    Button update;
+    Button update,delete;
     Movie movie;
     DbHelper dbHelper;
     RatingBar rating;
@@ -34,6 +35,7 @@ public class EditMovie extends AppCompatActivity {
         rating = findViewById(R.id.rating_bar);
         review = findViewById(R.id.review_edt);
         update = findViewById(R.id.updateBtn);
+        delete = findViewById(R.id.deletBtn);
 
         int id=getIntent().getIntExtra(Constant.MOVIEID,0);
         if(id!=0){
@@ -51,6 +53,32 @@ public class EditMovie extends AppCompatActivity {
             @Override
             public void onClick(View view) {
               datavalidation();
+            }
+        });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyAlertDialog alertDialog = new MyAlertDialog(EditMovie.this);
+                alertDialog.showConfirmDialog( "Are you sure ?", "Yes","No");
+                alertDialog.okButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.cancel();
+                        if(dbHelper.deleteMovie(String.valueOf(movie.getId()))){
+                            Toast.makeText(EditMovie.this, "Delete Successfully", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    }
+                });
+                alertDialog.cancelButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        alertDialog.cancel();
+                    }
+                });
+
+
+                alertDialog.show();
             }
         });
 

@@ -6,53 +6,54 @@
     android:layout_height="match_parent"
     android:background="@color/offwhite"
     tools:context=".Activity.SearchMovie">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/search_ly"
-    android:padding="20dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
-
-    <EditText
-        android:id="@+id/search_box"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_ly"
         android:layout_width="match_parent"
-        android:layout_weight="2.2"
-        style="@style/my_EditText_style"
-        android:hint="Search your movies"
-        android:textColorHint="@color/black"
-         app:layout_constraintTop_toTopOf="parent"
-        android:padding="10dp"
-        android:drawablePadding="5dp"
-        android:drawableLeft="@drawable/ic_baseline_search_24"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_shap_edit_texte">
-
-    </EditText>
-
-    <Button
-        android:layout_marginTop="10dp"
-        android:id="@+id/searchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.8"
-        android:text="LookUp"
-        android:background="@drawable/background_shape_button_round"
-        app:layout_constraintEnd_toEndOf="parent"
-
+        android:padding="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_box">
+        app:layout_constraintTop_toTopOf="parent">
 
-    </Button>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/search_box"
+            style="@style/my_EditText_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:background="@drawable/background_shap_edit_texte"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawablePadding="5dp"
+            android:hint="Search your movies"
+            android:padding="10dp"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.8"
+            android:background="@drawable/background_shape_button_round"
+            android:text="LookUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_box">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.recyclerview.widget.RecyclerView
-   android:layout_marginTop="20dp"
         android:id="@+id/movielist_by_search_rv"
-        app:layout_constraintTop_toBottomOf="@+id/search_ly"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/search_ly">
 
     </androidx.recyclerview.widget.RecyclerView>
 

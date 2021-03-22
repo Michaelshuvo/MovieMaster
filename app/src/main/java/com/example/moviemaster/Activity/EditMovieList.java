@@ -11,16 +11,23 @@ import com.example.moviemaster.Database.DbHelper;
 import com.example.moviemaster.R;
 
 public class EditMovieList extends AppCompatActivity {
-RecyclerView recyclerView;
+    RecyclerView recyclerView;
     DbHelper database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_movie_list);
         getSupportActionBar().setTitle(getResources().getString(R.string.edit_movies_titlebar));
-        recyclerView=findViewById(R.id.movielist_editpage_rv);
+        recyclerView = findViewById(R.id.movielist_editpage_rv);
+
+    }
+    @Override
+    public void onResume() {
+        //will be executed onResume
+        super.onResume();
         DbHelper dbHelper = new DbHelper(getApplicationContext());
-        recyclerView.setLayoutManager(new LinearLayoutManager(EditMovieList.this,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(EditMovieList.this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setHasFixedSize(true);
         EditPageAdapter movieListAdapter = new EditPageAdapter(dbHelper.getMovies(), EditMovieList.this);
         recyclerView.setAdapter(movieListAdapter);
